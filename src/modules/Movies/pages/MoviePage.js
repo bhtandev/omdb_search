@@ -46,7 +46,6 @@ export class MoviePage extends Component {
 
     doSearch = (text) => {
         const { dispatch } = this.props;
-        console.log('searching', text);
 
         if (text.length < 3) {
             const errorStatus = {
@@ -56,7 +55,7 @@ export class MoviePage extends Component {
 
             this.setState({ status: errorStatus});
         } else {
-            dispatch(fetchMovies(text));
+            dispatch(fetchMovies(text, true));
         }
     };
 

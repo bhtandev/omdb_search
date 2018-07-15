@@ -31,11 +31,11 @@ export default function moviesReducer(state = initialState, action) {
                 error: null,
             };
         case FETCH_MOVIES_SUCCESS:
-            const { movies, totalResults }= payload;
+            const { movies, totalResults, newSearch }= payload;
             return {
                 ...state,
                 loading: false,
-                movies: [...state.movies, ...movies],
+                movies: newSearch? [...movies] : [...state.movies, ...movies],
                 searchTotal: totalResults,
                 page: state.page + 1,
             };

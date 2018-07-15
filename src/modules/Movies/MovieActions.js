@@ -12,7 +12,7 @@ export function fetchMovies(text, newSearch = true) {
         const state = getState();
         let page = getPage(state);
 
-        if (newSearch) {
+        if (newSearch === true) {
             dispatch(fetchMoviesBegin(text));
         } else {
             dispatch(fetchMoviesContinue());
@@ -27,7 +27,7 @@ export function fetchMovies(text, newSearch = true) {
             if (Response == false) {
                 dispatch(fetchMoviesFailure('Error Loading'));
             } else {
-                dispatch(fetchMoviesSuccess(Search, totalResults));
+                dispatch(fetchMoviesSuccess(Search, totalResults, newSearch));
             }
 
         }).catch((error) => {
@@ -51,10 +51,10 @@ export const fetchMoviesBegin = (text) => {
     };
 };
 
-export const fetchMoviesSuccess = (movies, totalResults) => {
+export const fetchMoviesSuccess = (movies, totalResults, newSearch) => {
     return {
         type: FETCH_MOVIES_SUCCESS,
-        payload: { movies, totalResults }
+        payload: { movies, totalResults, newSearch }
     }
 };
 
