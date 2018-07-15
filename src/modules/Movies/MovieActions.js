@@ -24,14 +24,19 @@ export function fetchMovies(text, newSearch = true) {
         return callApi(queryString).then((res) => {
             const { Search, totalResults, Response } = res;
 
-            if (Response == false) {
-                dispatch(fetchMoviesFailure('Error Loading'));
+            console.log('res', res);
+
+            if (Response == "False") {
+
+                const errorMsg = ('Error' in res)? res.Error : 'Search not found';
+
+                dispatch(fetchMoviesFailure(errorMsg));
             } else {
                 dispatch(fetchMoviesSuccess(Search, totalResults, newSearch));
             }
 
         }).catch((error) => {
-            dispatch(fetchMoviesFailure('Error Loading'));
+            dispatch(fetchMoviesFailure('Search failed'));
         });
 
     };

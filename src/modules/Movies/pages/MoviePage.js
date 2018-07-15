@@ -49,7 +49,7 @@ export class MoviePage extends Component {
 
         if (text.length < 3) {
             const errorStatus = {
-                text: 'Minimum 3 characters!',
+                text: 'Minimum 3 characters required!',
                 type: 'error'
             };
 

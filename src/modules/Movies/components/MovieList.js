@@ -5,9 +5,9 @@ const MovieList = (props) => {
     return (
         <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}}>
             {
-                props.movies.map(movie =>
+                props.movies.map((movie, index) =>
                 <MovieListItem
-                    key={movie.imdbID + movie.Year}
+                    key={index}
                     {...movie}
                 />)
             }
