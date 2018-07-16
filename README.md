@@ -11,6 +11,7 @@ Simple React OMDB Search client. Powered by Redux.
 * Simple input validation. At least 2 characters required.
 * Backend API - http://omdbapi.com/ .
 * Mobile friendly.
+* Test with Chrome only (Version 64.0.3282.167)
 
 
 ## Installing
@@ -38,6 +39,12 @@ To run,
 ```
 npm test
 ```
+
+## DEMO
+
+[Link](https://bhtandev.github.io/omdb_search/)
+
+
 
 ## Further improvements
 
