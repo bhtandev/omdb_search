@@ -30,14 +30,14 @@ const MoveListItem = (props) => {
     const { Title, Poster, Year, imdbID } = props;
 
     return (
-        <div style={{padding: '10px'}}>
-        <Well>
-            <div >
-                {image(Poster)}
-                <Block>{Title}</Block>
-                <div>{Year}</div>
-            </div>
-        </Well>
+        <div id="movie-list-item" style={{padding: '10px'}}>
+            <Well>
+                <div >
+                    {image(Poster)}
+                    <Block>{Title}</Block>
+                    <div>{Year}</div>
+                </div>
+            </Well>
         </div>
     );
 };

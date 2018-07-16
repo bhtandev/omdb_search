@@ -15,7 +15,7 @@ import MovieList from '../components/MovieList';
 
 export class MoviePage extends Component {
     static propTypes = {
-        dispatch: PropTypes.func.isRequired,
+        dispatch: PropTypes.func,
         movies: PropTypes.array,
     };
 
@@ -61,7 +61,7 @@ export class MoviePage extends Component {
 
     render() {
         const { movies, searchTotal, loading, error } = this.props;
-        const hasMoreItems = movies.length < searchTotal;
+        const hasMoreItems = movies? (movies.length < searchTotal) : false;
 
         let footerStatus;
         if (error !== null) {
@@ -73,8 +73,8 @@ export class MoviePage extends Component {
         return (
             <div>
                 <div>
-                    <SubTitle fontSize="14px">Movie Search:</SubTitle>
-                    <SearchBox doSearch={this.doSearch} status={this.state.status}
+                    <SubTitle id="page-title" fontSize="14px">Movie Search:</SubTitle>
+                    <SearchBox id="search-box" doSearch={this.doSearch} status={this.state.status}
                      placeholder="Search movies..."></SearchBox>
                 </div>
                 <InfiniteScroll

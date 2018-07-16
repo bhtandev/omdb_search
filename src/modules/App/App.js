@@ -9,8 +9,8 @@ import MoviePage from '../Movies/pages/MoviePage';
 const App = () => {
     return (
         <div style={{display: 'flex', justifyContent: 'center'}}>
-            <FixedHeader>
-                <Title>BananaMDB</Title>
+            <FixedHeader id="app-bar">
+                <Title id="app-title">BananaMDB</Title>
             </FixedHeader>
             <ResponsiveContainer>
                 <MoviePage></MoviePage>

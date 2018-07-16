@@ -36,7 +36,6 @@ class SearchBox extends Component {
     };
 
     render() {
-
         const { status } = this.props;
 
         const statusTextColor = (status.type === 'error')? 'red' : 'black';
@@ -44,15 +43,16 @@ class SearchBox extends Component {
         return (
             <SearchInputBox >
                 <InputField
+                    id="search-box-input"
                     type="text"
                     placeholder={this.props.placeholder}
                     value={this.state.text}
                     onChange={this.handleTextChange}
                 />
-                <Button onClick={this.handleSubmit}>
+                <Button id="search-box-button" onClick={this.handleSubmit}>
                     Search
                 </Button>
-                <div style={{color: statusTextColor}}>
+                <div id="search-box-status" style={{color: statusTextColor}}>
                     {status.text}
                 </div>
             </SearchInputBox>
