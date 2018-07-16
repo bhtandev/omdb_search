@@ -1,4 +1,4 @@
-const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=8c81f9c';
+const API_URL = 'https://www.omdbapi.com/?i=tt3896198&apikey=8c81f9c';
 
 export default function callApi(queryString, method = 'get', body, options) {
     return fetch(`${API_URL}${queryString}`)
@@ -13,4 +13,5 @@ export default function callApi(queryString, method = 'get', body, options) {
         response => response,
     );
 }
+
 
