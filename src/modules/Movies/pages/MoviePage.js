@@ -47,9 +47,9 @@ export class MoviePage extends Component {
     doSearch = (text) => {
         const { dispatch } = this.props;
 
-        if (text.length < 3) {
+        if (text.length < 2) {
             const errorStatus = {
-                text: 'Minimum 3 characters required!',
+                text: 'Minimum 2 characters required!',
                 type: 'error'
             };
 
@@ -85,7 +85,7 @@ export class MoviePage extends Component {
                     <MovieList movies={movies}></MovieList>
                 </InfiniteScroll>
                 <Footer>
-                    <p>{footerStatus}</p>
+                    <p style={{color: (error !== null)? 'red':'black'}}>{footerStatus}</p>
                 </Footer>
             </div>
         )

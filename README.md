@@ -2,21 +2,38 @@
 
 Simple React OMDB Search client. Powered by Redux.
 
-### Tech Used
+## Details
 
-* ES6, React, Redux, Webpack, styled-components, ava, enzyme.
-* Results show up in responsive grid
+* ES6, React, Redux, Webpack, ava, enzyme.
+* Modern styling using styled-components.
+* Results show up in responsive grid.
+* Search result pagination achieved from infinite scrolling. Further fetches executed as user scrolls down further.
+* Simple input validation. At least 2 characters required.
+* Backend API - http://omdbapi.com/ .
+* Mobile friendly.
 
 
-### Installing
+## Installing
 
 ```
 npm install
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+## Running the app 
+
+```
+npm start
+```
 
 ## Running the tests
+
+You may need to install ava globally. 
+
+```
+npm install --global ava
+```
+
+To run,
 
 ```
 npm test
