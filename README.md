@@ -11,7 +11,7 @@ Simple React OMDB Search client. Powered by Redux.
 * Simple input validation. At least 2 characters required.
 * Backend API - http://omdbapi.com/ .
 * Mobile friendly.
-* Test with Chrome only (Version 64.0.3282.167)
+* Tested against one browser so far. (Chrome Version 64.0.3282.167)
 
 
 ## Installing
@@ -51,6 +51,7 @@ npm test
 * Autocomplete search input ( must be throttled or debounced for smoother use )
 * Maybe Search bar to start in the center of page when first load. After search it will move up via some nice animation.
 * More unit tests.
+* Test against other browsers.
 
 
 ## Authors
