@@ -8,10 +8,6 @@ Simple React OMDB Search client. Powered by Redux.
 * Results show up in responsive grid
 
 
-```
-Give examples
-```
-
 ### Installing
 
 ```
@@ -23,7 +19,7 @@ End with an example of getting some data out of the system or using it for a lit
 ## Running the tests
 
 ```
-Give an example
+npm test
 ```
 
 ## Further improvements
