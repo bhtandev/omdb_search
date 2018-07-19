@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
-const SubTitle = styled.h3`
+const SubTitle = styled.p`
   padding: 12px;
-  color: ${props => props.color? props.color: 'black'},
+  font-size: 24px;
+  color: ${props => props.color? props.color: 'grey'},
 `;
 
 export default SubTitle;

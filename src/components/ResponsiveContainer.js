@@ -8,7 +8,6 @@ const ResponsiveContainer = styled.div`
   flex-direction: column; 
   /* background: gray; */
   width: 100%;
-  font-family: "sans-serif";
   text-align: center;
   margin-top: ${props => props.marginTop? props.marginTop: HEADER_HEIGHT}
   

@@ -73,7 +73,7 @@ export class MoviePage extends Component {
         return (
             <div>
                 <div>
-                    <SubTitle id="page-title" fontSize="14px">Movie Search:</SubTitle>
+                    <SubTitle id="page-title">Movie Search:</SubTitle>
                     <SearchBox id="search-box" doSearch={this.doSearch} status={this.state.status}
                      placeholder="Search movies..."></SearchBox>
                 </div>
