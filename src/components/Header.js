@@ -7,7 +7,7 @@ const Header = styled.div`
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    background: #E9967A;
+    background: #2F4F4F;
     height: ${HEADER_HEIGHT};
     color: #fff;
     top: 0;
